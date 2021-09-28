@@ -1,0 +1,439 @@
+// Algoritmo de area de figuras
+
+import javax.swing.JOptionPane;
+
+public class areasFiguras {
+    public static void main(String[] args) {
+        String figura = JOptionPane.showInputDialog("Elija la figura para calcular el area \n"
+                + "'a' area de triangulo \n"
+                + "'b' area del cuadrado \n"
+                + "'c' area del circulo \n"
+                + "'d' area del rectangulo \n"
+        );
+        
+        switch(figura){
+            case "a":
+                int base = Integer.parseInt(JOptionPane.showInputDialog("ingrese la base del triangulo: "));
+                int altura = Integer.parseInt(JOptionPane.showInputDialog("ingrese la altura del triangulo: "));
+                int area = (base * altura) / 2;
+                JOptionPane.showConfirmDialog(null, "el area del triangulo es de: " + area);
+            break;
+            case "b":
+                int lado = Integer.parseInt(JOptionPane.showInputDialog("ingrese el lado del cuadrado: "));
+                int area2 = lado * lado;
+                JOptionPane.showConfirmDialog(null, "el area del cuadrado es de: " + area2);
+            break;
+            case "c":
+                int radio = Integer.parseInt(JOptionPane.showInputDialog("ingrese el radio del circulo: "));
+                double area3 = 3.1415 * (radio * radio);
+                JOptionPane.showConfirmDialog(null, "el area del triangulo es de: " + area3);
+            break;
+            case "d":
+                int baseRec = Integer.parseInt(JOptionPane.showInputDialog("ingrese la base del triangulo: "));
+                int alturaRec = Integer.parseInt(JOptionPane.showInputDialog("ingrese la altura del triangulo: "));
+                int area4 = baseRec * alturaRec;
+                JOptionPane.showConfirmDialog(null, "el area del triangulo es de: " + area4);
+            break;
+            default:
+                JOptionPane.showConfirmDialog(null, "ingrese un valor valido");
+            break;
+        }
+        
+    }
+      
+}
+
+// Algoritmo para ver cantidad de dias en un mes si el año es viciesto
+
+
+import javax.swing.JOptionPane;
+
+
+public class diasMes {
+    
+    public static void main(String[] args) {
+        int numDias = 0;
+
+        String mes = JOptionPane.showInputDialog("Escriba el mes en minusculas: ");
+        int anio = Integer.parseInt(JOptionPane.showInputDialog("ingrese el año"));
+
+        int viciesto = 0;
+        
+        if(anio % 4 == 0) {
+            if(anio % 100 == 0){
+                if(anio % 400 == 0){
+                    viciesto = 1;
+                }
+            }
+        }
+        
+        
+        switch(mes){
+            case "enero":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "febrero":
+                if(viciesto == 1) {
+                    numDias = 29;
+                    JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+                } else {
+                    numDias = 28;
+                    JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+                }
+            break;
+            case "marzo":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "abril":
+                numDias = 30;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "mayo":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "junio":
+                numDias = 30;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "julio":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "agosto":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "septiembre":
+                numDias = 30;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "octubre":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "noviembre":
+                numDias = 30;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            case "diciembre":
+                numDias = 31;
+                JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
+            break;
+            
+            
+            
+        }
+
+    }
+}
+
+// algoritmo para ingresar numero que representa el dia de la semana 
+
+import java.util.Scanner;
+
+
+public class ejercicioClase {
+    public static void main(String[] args) {
+        int numDia;
+        Scanner sc = new Scanner(System.in);
+        
+        System.out.println("Escriba el numero del dia del 1 al 7: " );
+        numDia = sc.nextInt();
+        
+        switch(numDia){
+            case 1: 
+                System.out.println("domingo");
+            break;
+            case 2: 
+                System.out.println("lunes");
+            break;
+            case 3: 
+                System.out.println("martes");
+            break;
+            case 4: 
+                System.out.println("miercoles");
+            break;
+            case 5: 
+                System.out.println("jueves");
+            break;
+            case 6: 
+                System.out.println("viernes");
+            break;
+            case 7: 
+                System.out.println("sabado");
+            break;
+            default:
+                System.out.println("el numero no representa ningun dia");
+            break;
+        }
+    }
+}
+
+// algoritmo que muestra el numero del dia en la semana apartir del nombre
+
+
+import javax.swing.JOptionPane;
+
+
+public class ejercicio_02 {
+    public static void main(String[] args) {
+        String numDia;
+        
+        
+        numDia = JOptionPane.showInputDialog("Escriba el nombre del dia en minusculas");
+                
+        switch(numDia){
+        case "domingo": 
+            JOptionPane.showConfirmDialog(null,"1");
+        break;
+        case "lunes": 
+            JOptionPane.showConfirmDialog(null, "2");
+        break;
+        case "martes": 
+            JOptionPane.showConfirmDialog(null, "3");
+        break;
+        case "miercoles": 
+            JOptionPane.showConfirmDialog(null, "4");
+        break;
+        case "jueves": 
+            JOptionPane.showConfirmDialog(null, "5");
+        break;
+        case "viernes": 
+            JOptionPane.showConfirmDialog(null, "6");
+        break;
+        case "sabado": 
+            JOptionPane.showConfirmDialog(null, "7");
+        break;
+        default:
+            JOptionPane.showConfirmDialog(null, "el nombre del dia es incorrecto");
+        break;
+        
+        }
+    }
+}
+
+// algoritmo que muestra el nombre del mes apartir de su numero
+
+import javax.swing.JOptionPane;
+
+public class meses {
+    public static void main(String[] args) {
+        String mes = JOptionPane.showInputDialog("ingrese un numero del 1 al 12 correspondiente al mes: ");
+        
+        switch(mes){
+            case "1":
+                JOptionPane.showConfirmDialog(null,"el mes es Enero");
+            break;
+            case "2":
+                JOptionPane.showConfirmDialog(null,"el mes es Febrero");
+            break;
+            case "3":
+                JOptionPane.showConfirmDialog(null,"el mes es Marzo");
+            break;
+            case "4":
+                JOptionPane.showConfirmDialog(null,"el mes es Abril");
+            break;
+            case "5":
+                JOptionPane.showConfirmDialog(null,"el mes es Mayo");
+            break;
+            case "6":
+                JOptionPane.showConfirmDialog(null,"el mes es Junio");
+            break;
+            case "7":
+                JOptionPane.showConfirmDialog(null,"el mes es Julio");
+            break;
+            case "8":
+                JOptionPane.showConfirmDialog(null,"el mes es Agosto");
+            break;
+            case "9":
+                JOptionPane.showConfirmDialog(null,"el mes es Septiembre");
+            break;
+            case "10":
+                JOptionPane.showConfirmDialog(null,"el mes es Octubre");
+            break;
+            case "11":
+                JOptionPane.showConfirmDialog(null,"el mes es Noviembre");
+            break;
+            case "12":
+                JOptionPane.showConfirmDialog(null,"el mes es Diciembre");
+            break;
+            default:
+                JOptionPane.showConfirmDialog(null,"el numero es incorrecto");
+            break;
+        }
+        
+    }
+}
+
+// algoritmo que hace operacion matematica apartir del caracter seleccionado
+
+
+import javax.swing.JOptionPane;
+
+
+public class operacionMatematica {
+    public static void main(String[] args) {
+        int numUno = Integer.parseInt(JOptionPane.showInputDialog("ingrese el primer numero"));
+        int numDos = Integer.parseInt(JOptionPane.showInputDialog("ingrese el segundo numero"));
+        String operador = JOptionPane.showInputDialog("ingrese el caracter que representa la operacion (+ , -, *, /)");
+        int resultado = 0;
+        
+        
+        switch(operador) {
+            case "+":
+                resultado = numUno + numDos;
+                JOptionPane.showConfirmDialog(null,"el resultado de la suma es: " + resultado);
+            break;
+            case "-":
+                resultado = numUno - numDos;
+                JOptionPane.showConfirmDialog(null,"el resultado de la resta es: " + resultado);
+            break;
+            case "*":
+                resultado = numUno * numDos;
+                JOptionPane.showConfirmDialog(null,"el resultado de la multiplicacion es: " + resultado);
+            break;
+            case "/":
+                if(numDos == 0) {
+                    JOptionPane.showConfirmDialog(null,"no se puede dividir por 0");
+                } else {
+                    resultado = numUno / numDos;
+                    JOptionPane.showConfirmDialog(null,"el resultado de la division es: " + resultado);
+                }
+            break;
+            default:
+                    JOptionPane.showConfirmDialog(null,"ingrese valores correctos");
+            break;
+        }
+        
+    }
+}
+
+// algoritmo que calcula es salario de empleados apartir de su clase y valor de horas
+
+
+import javax.swing.JOptionPane;
+
+public class salarioEmpleado {
+    public static void main(String[] args) {
+        int valorH = 0, horasExt = 0, horasTra = 0, valorHorasTra = 0;
+        double valorHorasExt = 0, devengado = 0;
+        String clase = JOptionPane.showInputDialog("Elija la clase a la que pertenece"
+                + "'a' 'b' 'c' 'd'"
+        );
+        
+        int horasIng = Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de horas trabajadas"));
+        
+        
+        if(horasIng >= 48){
+            horasExt = horasIng - 48;
+        }
+        
+        switch(clase){
+            case "a":
+                valorH = 7_500;
+                horasTra = horasIng - horasExt;
+                valorHorasTra = horasTra * valorH;
+                valorHorasExt = horasExt * (valorH + (valorH * 0.25));
+                devengado = valorHorasExt + valorHorasTra;
+                JOptionPane.showConfirmDialog(null, "su clase de trabajador es: " + clase);
+                JOptionPane.showConfirmDialog(null, "el valor de su hora es: " + valorH);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas que trabajo es: " + horasTra);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas extras es: " + horasExt);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas trabajadas es de: " + valorHorasTra);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas extras es de: " + valorHorasExt);
+                JOptionPane.showConfirmDialog(null, "el total devengado es de " + devengado);
+            break;
+            case "b":
+                valorH = 8_000;
+                horasTra = horasIng - horasExt;
+                valorHorasTra = horasTra * valorH;
+                valorHorasExt = horasExt * (valorH + (valorH * 0.25));
+                devengado = valorHorasExt + valorHorasTra;
+                JOptionPane.showConfirmDialog(null, "su clase de trabajador es: " + clase);
+                JOptionPane.showConfirmDialog(null, "el valor de su hora es: " + valorH);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas que trabajo es: " + horasTra);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas extras es: " + horasExt);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas trabajadas es de: " + valorHorasTra);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas extras es de: " + valorHorasExt);
+                JOptionPane.showConfirmDialog(null, "el total devengado es de " + devengado);
+            break;
+            case "c":
+                valorH = 8_500;
+                horasTra = horasIng - horasExt;
+                valorHorasTra = horasTra * valorH;
+                valorHorasExt = horasExt * (valorH + (valorH * 0.25));
+                devengado = valorHorasExt + valorHorasTra;
+                JOptionPane.showConfirmDialog(null, "su clase de trabajador es: " + clase);
+                JOptionPane.showConfirmDialog(null, "el valor de su hora es: " + valorH);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas que trabajo es: " + horasTra);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas extras es: " + horasExt);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas trabajadas es de: " + valorHorasTra);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas extras es de: " + valorHorasExt);
+                JOptionPane.showConfirmDialog(null, "el total devengado es de " + devengado);
+            break;
+            case "d":
+                valorH = 9_000;
+                horasTra = horasIng - horasExt;
+                valorHorasTra = horasTra * valorH;
+                valorHorasExt = horasExt * (valorH + (valorH * 0.25));
+                devengado = valorHorasExt + valorHorasTra;
+                JOptionPane.showConfirmDialog(null, "su clase de trabajador es: " + clase);
+                JOptionPane.showConfirmDialog(null, "el valor de su hora es: " + valorH);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas que trabajo es: " + horasTra);
+                JOptionPane.showConfirmDialog(null, "la cantidad de horas extras es: " + horasExt);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas trabajadas es de: " + valorHorasTra);
+                JOptionPane.showConfirmDialog(null, "el valor de las horas extras es de: " + valorHorasExt);
+                JOptionPane.showConfirmDialog(null, "el total devengado es de " + devengado);
+            break;
+            default:
+                JOptionPane.showConfirmDialog(null, "ingrese una clase correcta");
+            break;  
+        }
+        
+    }
+}
+
+// algoritmo que calcula la cantidad de subcidio apartir de la cantidad de hijos en una 
+// familia
+
+import javax.swing.JOptionPane;
+
+public class subcidioHijos {
+    public static void main(String[] args) {
+        double subcidio = 35_000;
+        int cantHijos = Integer.parseInt(JOptionPane.showInputDialog("ingrese la cantidad de hijos"));
+        
+        switch(cantHijos) {
+            case 0:
+                JOptionPane.showConfirmDialog(null, "su subcidio es de 0");
+            break;
+            case 1:
+                JOptionPane.showConfirmDialog(null, "su subcidio es de " + subcidio);
+            break;
+            case 2:
+                subcidio = subcidio + (subcidio * 0.05);
+                JOptionPane.showConfirmDialog(null, "su subcidio es de " + subcidio);
+            break;
+            case 3:
+                subcidio = subcidio + (subcidio * 0.1);
+                JOptionPane.showConfirmDialog(null, "su subcidio es de " + subcidio);
+            break;
+            case 4:
+                subcidio = subcidio + (subcidio * 0.15);
+                JOptionPane.showConfirmDialog(null, "su subcidio es de " + subcidio);
+            break;
+            case 5:
+                subcidio = subcidio + (subcidio * 0.2);
+                JOptionPane.showConfirmDialog(null, "su subcidio es de " + subcidio);
+            break;
+            default:
+                subcidio = subcidio + (subcidio * 0.2);
+                JOptionPane.showConfirmDialog(null, "tienes mas de 5 hijos y su subcidio es de " + subcidio);
+            break;
+            
+        } 
+    }
+}
