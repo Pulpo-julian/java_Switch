@@ -10,16 +10,6 @@ public class diasMes {
         String mes = JOptionPane.showInputDialog("Escriba el mes en minusculas: ");
         int anio = Integer.parseInt(JOptionPane.showInputDialog("ingrese el año"));
 
-        int viciesto = 0;
-        
-        if(anio % 4 == 0) {
-            if(anio % 100 == 0){
-                if(anio % 400 == 0){
-                    viciesto = 1;
-                }
-            }
-        }
-        
         
         switch(mes){
             case "enero":
@@ -27,7 +17,7 @@ public class diasMes {
                 JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
             break;
             case "febrero":
-                if(viciesto == 1) {
+                if((anio % 4 == 0) && (anio % 100 != 0 || anio % 400 == 0)) {
                     numDias = 29;
                     JOptionPane.showConfirmDialog(null,"la cantidad de dias del mes es: " + numDias);
                 } else {
